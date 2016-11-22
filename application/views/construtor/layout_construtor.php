@@ -73,7 +73,7 @@
 
 <body class="modifbody fundo_site" elemento=".fundo_site" funcao="edicao_fundo" id_caixa=".conteudoLogo" id="body_site">
     <input type="hidden" name="base_url" id="base_url" value="<?php echo base_url(); ?>">
-    <?php $this->load->view('partials/topo');?>
+    <?php $this->load->view('construtor/partials/topo');?>
 
     <?php $this->load->view($view);?>
 

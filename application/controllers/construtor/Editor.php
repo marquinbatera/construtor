@@ -16,7 +16,7 @@ class Welcome extends CI_Controller {
 		$this->load->library(array('ion_auth','form_validation'));
 		$this->load->library('easy_parser');
 		$this->load->library('session');
-		$this->load->model('ci_template_model');
+		$this->load->model('construtor/ci_template_model');
 		
 	}
 

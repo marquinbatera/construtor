@@ -16,7 +16,7 @@ class Welcome extends CI_Controller {
 		$this->load->library(array('ion_auth','form_validation'));
 		$this->load->library('easy_parser');
 		$this->load->library('session');
-		$this->load->model('ci_template_model');
+		$this->load->model('construtor/ci_template_model');
 		
 	}
 
@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 			'pagina' => $pagina
 		);
 		//this use easy parse
-		$this->easy_parser->parse('layout_principal', $data);
+		$this->easy_parser->parse('construtor/layout_construtor', $data);
 	}
 
 	public function detalhe()
@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
 			'pagina' => $pagina
 		);
 		//this use easy parse
-		$this->easy_parser->parse('layout_principal', $data);
+		$this->easy_parser->parse('construtor/layout_construtor', $data);
 	}
 
 	public function sobre()
@@ -62,7 +62,7 @@ class Welcome extends CI_Controller {
 			'pagina' => $pagina
 		);
 		//this use easy parse
-		$this->easy_parser->parse('layout_principal', $data);
+		$this->easy_parser->parse('construtor/layout_construtor', $data);
 	}
 
 	public function carrinho()
@@ -77,7 +77,7 @@ class Welcome extends CI_Controller {
 			'pagina' => $pagina
 		);
 		//this use easy parse
-		$this->easy_parser->parse('layout_principal', $data);
+		$this->easy_parser->parse('construtor/layout_construtor', $data);
 	}
 
 	public function grid()
@@ -92,7 +92,7 @@ class Welcome extends CI_Controller {
 			'pagina' => $pagina
 		);
 		//this use easy parse
-		$this->easy_parser->parse('layout_principal', $data);
+		$this->easy_parser->parse('construtor/layout_construtor', $data);
 	}
 
 	public function contato()
@@ -107,7 +107,7 @@ class Welcome extends CI_Controller {
 			'pagina' => $pagina
 		);
 		//this use easy parse
-		$this->easy_parser->parse('layout_principal', $data);
+		$this->easy_parser->parse('construtor/layout_construtor', $data);
 	}
 
 }

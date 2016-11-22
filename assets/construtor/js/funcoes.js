@@ -1,7 +1,7 @@
 $(function(){
 
 	  var baseUrl = $("#base_url").val();
-    // console.log(baseUrl);
+    console.log(baseUrl);
     preenche_styles();
 
     $('#ordem').sortable();
@@ -152,7 +152,7 @@ $(function(){
 function preenche_styles(){
   var baseUrl = $("#base_url").val();
   $.ajax({
-    url: baseUrl+"template/preenche_styles",
+    url: baseUrl+"construtor/template/preenche_styles",
     type:"POST",
     data: {pag: $('#id_page').val()},
     success: function(data){
@@ -183,6 +183,7 @@ function preenche_styles(){
 /*Limpa estilos do elemento selecionado By. Marcos Meira*/
 function limpaStyles(elemento)
 {
+  var baseUrl = $("#base_url").val();
   var id_tipo = $('.'+elemento).attr('id_tipo');
   if(id_tipo == undefined)
     id_tipo = elemento;
@@ -190,7 +191,7 @@ function limpaStyles(elemento)
   console.log(id_tipo);
   $.ajax({
     type: "POST",
-    url: baseUrl+"template/limparStyles",
+    url: baseUrl+"construtor/template/limparStyles",
     data: {elemento: id_tipo},
     success: function(data){
       console.log('excluido com sucesso');
@@ -348,6 +349,7 @@ function startBanner() {
 
 
     function mostrar(){ 
+      var baseUrl = $("#base_url").val();
       // var div = document.getElementsByClassName('modif');
       // var position = 0;
       // for(var i in div){
@@ -417,7 +419,7 @@ function startBanner() {
               console.log("estilos: "+strEstilos);
               $.ajax({
                   method: "POST",
-                  url: baseUrl+"template/salvaEstilos",
+                  url: baseUrl+"construtor/template/salvaEstilos",
                   data: { idpag: $('#id_page').val(), idtipo: tipo, idelemento: i, claseestilo: clasesDiv[1], estilos: strEstilos }
                 });
             }
@@ -453,7 +455,7 @@ function startBanner() {
               console.log("estilos: "+strEstilos);
               $.ajax({
                   method: "POST",
-                  url: baseUrl+"template/salvaEstilos",
+                  url: baseUrl+"construtor/template/salvaEstilos",
                   data: { idpag: "menu", idtipo: tipo, idelemento: i, claseestilo: clasesDiv[1], estilos: strEstilos }
                 });
             }
@@ -489,7 +491,7 @@ function startBanner() {
               console.log("estilos: "+strEstilos);
               $.ajax({
                   method: "POST",
-                  url: baseUrl+"template/salvaEstilos",
+                  url: baseUrl+"construtor/template/salvaEstilos",
                   data: { idpag: "footer", idtipo: tipo, idelemento: i, claseestilo: clasesDiv[1], estilos: strEstilos }
                 });
             }
@@ -526,7 +528,7 @@ function startBanner() {
               console.log("estilos: "+strEstilos);
               $.ajax({
                   method: "POST",
-                  url: baseUrl+"template/salvaEstilos",
+                  url: baseUrl+"construtor/template/salvaEstilos",
                   data: { idpag: "fundo", idtipo: tipo, idelemento: i, claseestilo: clasesDiv[1], estilos: strEstilos }
                 });
             }
@@ -562,7 +564,7 @@ function startBanner() {
               console.log("estilos: "+strEstilos);
               $.ajax({
                   method: "POST",
-                  url: baseUrl+"template/salvaEstilos",
+                  url: baseUrl+"construtor/template/salvaEstilos",
                   data: { idpag: "links", idtipo: tipo, idelemento: i, claseestilo: clasesDiv[1], estilos: strEstilos }
                 });
             }

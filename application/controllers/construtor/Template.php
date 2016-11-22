@@ -8,7 +8,7 @@ Class Template extends CI_controller {
 		//use library easy parse
 		$this->load->library('easy_parser');
 		$this->load->library('session');
-		$this->load->model('ci_template_model');
+		$this->load->model('construtor/ci_template_model');
 	}
 
 	public function index()

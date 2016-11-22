@@ -1,6 +1,6 @@
-var baseUrl = window.location.protocol + "/construtor_teste/";
+// var baseUrl = window.location.protocol + "/construtor_teste/";
 // var baseUrl = $("#base_url").val();
-console.log(baseUrl);
+// console.log(baseUrl);
 
 /*************************************************************************/
 /*************************************************************************/
@@ -10,7 +10,7 @@ console.log(baseUrl);
 
 function edicao_texto_fundo (elemento)
 {
-
+    var baseUrl = $("#base_url").val();
 	var el = elemento;
 	var modal = '<div class="tabs-left">'+
                 '<ul class="nav nav-tabs" style="margin-right: 0px;">'+
@@ -267,6 +267,7 @@ function edicao_texto_fundo (elemento)
 
 function edicao_texto_link (elemento)
 {
+    var baseUrl = $("#base_url").val();
     var el = elemento;
     var modal = '<div class="tabs-left">'+
                 '<ul class="nav nav-tabs" style="margin-right: 0px;">'+
@@ -594,7 +595,8 @@ function edicao_texto_link (elemento)
 
 function edicao_fundo (elemento)
 {
-	var modal = '<div class="tabs-left">'+
+	var baseUrl = $("#base_url").val();
+    var modal = '<div class="tabs-left">'+
                 '<ul class="nav nav-tabs" style="margin-right: 0px;">'+
                     '<li class="active"><a data-toggle="tab" href="#tab-1"><img src="'+baseUrl+'assets/construtor/icons/icons5/png/painter.png" style="max-height: 40px; max-width: 80px;"></a></li>'+
                	'</ul>'+
@@ -661,7 +663,8 @@ function edicao_fundo_borda (elemento)
 
 function edicao_botao(elemento)
 {
-	var el = elemento;
+	var baseUrl = $("#base_url").val();
+    var el = elemento;
 	var modal = '<div class="tabs-left">'+
                 '<ul class="nav nav-tabs" style="margin-right: 0px;">'+
                     '<li class="active"><a data-toggle="tab" href="#tab-11"><img src="'+baseUrl+'assets/construtor/icons/icons5/png/painter.png" style="max-height: 40px; max-width: 80px;"></a></li>'+
