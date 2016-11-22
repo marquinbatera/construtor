@@ -1,18 +1,15 @@
 .DS_Store
 
 !uploads/*
-!application/config/database.php
-!application/cache/*
+application/config/database.php
+application/cache/*
 !application/cache/index.html
 !application/cache/.htaccess
 
-!application/logs/*
+application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-# IGNORE PROXIES (DOCTRINE)
-application/models/Proxies/**/*
-application/models/ProxiesOTL/**/*
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
